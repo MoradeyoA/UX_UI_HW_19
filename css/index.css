@@ -1,0 +1,373 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  letter-spacing: 0.5px;
+  color: #05360a;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 52px;
+}
+
+.left-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 32px;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+}
+
+.links {
+  margin-right: 105px;
+}
+
+button {
+  padding: 13px 19px;
+  background: #ce0cb2;
+  border-radius: 50px;
+  margin-right: 52px;
+
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+  padding: 69px;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px 40px;
+  }
+}
+
+.hero-title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 96px;
+  line-height: 94px;
+  /* or 98% */
+  letter-spacing: 0.5px;
+  color: #08092e;
+  width: 100%;
+}
+
+.hero-body {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 23px;
+  /* identical to box height */
+
+  letter-spacing: 0.5px;
+  margin-top: 45px;
+
+  color: #c00ca6;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-image {
+  border-radius: 50%;
+}
+
+.my-work {
+  padding: 20px 0;
+  background: #ce0cb2;
+}
+
+.my-skills-container {
+  width: 100%;
+  padding: 102px 230px;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(
+    95.21deg,
+    rgba(22, 156, 197, 0.34) 0.98%,
+    rgba(86, 208, 235, 0.41) 18.74%,
+    rgba(106, 255, 15, 0.59) 40.14%,
+    rgba(239, 114, 22, 0.64) 59.58%,
+    rgba(228, 38, 201, 0.98) 79.24%,
+    #169cc5 104.85%
+  );
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px 40px;
+  }
+}
+
+.my-ux-skills {
+  padding: 102px 230px;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px 40px;
+  }
+}
+
+.my-work-container {
+  display: flex;
+  padding: 0 40px;
+  gap: 25px;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.my-work-heading {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 75px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.my-work-text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: #ffffff;
+}
+
+.my-work-text {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+  color: #ffffff;
+  margin-right: 150px;
+}
+
+.my-work-body {
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+hr {
+  border: 1px solid #ffffff;
+  margin: 25px 0;
+}
+
+.arrow-right {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  height: 3px;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.my-ux-skills-heading {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 29px;
+  /* identical to box height */
+  color: black;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.my-work-subheading {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  /* or 117% */
+  letter-spacing: 0.5px;
+  color: #05360a;
+  margin: 40px 0 20px 0;
+}
+
+.recent-projects {
+  padding: 0 234px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 63px;
+  /* identical to box height, or 98% */
+
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-top: 169px;
+
+  color: #05360a;
+}
+
+.see-more {
+  background: #ce0cb2;
+  border-radius: 50px;
+  margin-top: 55px;
+  margin-bottom: 128px;
+}
+
+.recent-project-header {
+  text-align: left;
+
+  font-style: normal;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 63px;
+  /* identical to box height, or 140% */
+
+  text-align: left;
+  letter-spacing: 0.5px;
+
+  color: #05360a;
+}
+
+.recent-project-text {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 63px;
+  /* or 210% */
+
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #000000;
+}
+
+.recent-project-study {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 63px;
+  /* or 210% */
+
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #ce0cb2;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 230px;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px 40px;
+  }
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  /* identical to box height, or 210% */
+  line-height: 63px;
+  color: #ce0cb2;
+}
+
+.footer-link {
+  margin-right: 17px;
+}
